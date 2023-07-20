@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/tools/tools",
+    "pages/profile/profile",
+    "pages/tools/ColorTransform/ColorTransform",
+    "pages/tools/ChineseColor/ChineseColor",
+    "pages/tools/DanMu/DanMu",
+    "pages/tools/MuYu/MuYu"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#f5f5f5"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/tools/tools",
+        "iconPath": "images/tabbar/tools.png",
+        "selectedIconPath": "images/tabbar/tools_s.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "images/tabbar/profile.png",
+        "selectedIconPath": "images/tabbar/profile_s.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

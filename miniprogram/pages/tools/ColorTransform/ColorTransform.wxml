@@ -1,0 +1,25 @@
+<view class="page" style="background-color: {{backgroundColor}}">
+
+  <view  class="home-button">
+		<image bindtap="goToHomePage" class="home-button-image" src="../../../images/other/return.png"></image>
+</view>
+
+	<view class="box">
+		<view class="result-container">
+			<view class="result-item" wx:if="{{rgbColor !== 'false'}}">
+				<text class="result-text">RGB颜色值：</text>
+				<text class="result-text" bindtap="copyRGBColor">{{rgbColor}}</text>
+			</view>
+			<view class="result-item" wx:if="{{hexColor !== 'false'}}">
+				<text class="result-text">十六进制颜色值：</text>
+				<text class="result-text" bindtap="copyhexColor">{{hexColor}}</text>
+			</view>
+		</view>
+
+		<view class="input-container">
+			<input class="input-text" bindinput="handleInput" placeholder="输入RGB值或16进制值" />
+		</view>
+
+
+	</view>
+</view>

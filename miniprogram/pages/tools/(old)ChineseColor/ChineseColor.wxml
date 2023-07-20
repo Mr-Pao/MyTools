@@ -1,0 +1,29 @@
+<view class="container">
+  <view  class="home-button">
+		<image bindtap="goToHomePage" class="home-button-image" src="../../../images/other/return.png"></image>
+</view>
+  
+  <view class="title">{{colorList[0].title}}</view>
+  <view class="card-list">
+    <block wx:for="{{colorList[0].list}}" wx:key="index">
+      <view class="color-card" bindtap="copyHex" data-hex="{{item.hex}}" style="background-color: {{item.hex}}">
+        <view class="color-content">
+          <view class="color-name">{{item.name}}</view>
+          <view class="color-value" style="color: {{getContrastColor(item.hex)}}">{{item.hex}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="title">{{colorList[1].title}}</view>
+  <view class="card-list">
+    <block wx:for="{{colorList[1].list}}" wx:key="index">
+      <view class="color-card" bindtap="copyHex" data-hex="{{item.hex}}" style="background-color: {{item.hex}}">
+        <view class="color-content">
+          <view class="color-name">{{item.name}}</view>
+          <view class="color-value" style="color: {{getContrastColor(item.hex)}}">{{item.hex}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

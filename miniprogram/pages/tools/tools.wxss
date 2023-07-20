@@ -1,0 +1,65 @@
+/* pages/tools/tools.wxss */
+@import '../../app.wxss';
+
+.banner{
+  width: 100%;
+}
+
+.fullscreen-image {
+  width: 100%;
+}
+
+.tools_list {
+  position: relative;
+  width: 100%;
+  background-color: var(--background-color);
+  border-radius: 40rpx;
+  /* box-shadow: 0px -3px 3px 0px var(--shadow-color); */
+  top: -40rpx;
+  
+  display: flex;
+  justify-content: center; /* 在水平方向上居中对齐 */
+  flex-wrap: wrap; /* 换行 */
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--theme-color);
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* 换行 */
+}
+
+.button {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 30rpx;
+  border-radius: 30rpx;
+  box-shadow: 0rpx 2rpx 4rpx var(--shadow-color);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-icon {
+  width: 40%; /* 图标宽度占满按钮的宽度 */
+  aspect-ratio: 1/1; /* 图标宽高比例为 1:1，保持正方形 */
+  margin-bottom: 8px; /* 图标与文字之间的间距 */
+}
+
+.button text {
+  color: var(--text-color);
+  margin-top: 5rpx;
+}

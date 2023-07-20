@@ -1,0 +1,37 @@
+<view class="page" style="background-color: {{backgroundColor}}">
+  <view  class="home-button">
+		<image bindtap="goToHomePage" class="home-button-image" src="../../../images/other/return.png"></image>
+</view>
+
+  <view class="container">
+    <block wx:for="{{colors}}" wx:key="name">
+      <view class="color-card" style="--card-background: {{item.hex}}" bind:tap="changeBackground" data-index="{{index}}">
+        <text class="color-name" >{{item.name}}</text>
+        <text class="color-hex">{{item.hex}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 右侧信息 -->
+  <view class="info-panel" wx:if="{{selectedColor}}">
+    <view class="info-name">
+      <text class="name">{{selectedColor.name}}</text>
+      <text class="pinyin">{{selectedColor.pinyin}}</text>
+    </view>
+    <view class="info-cell">
+      <text class="cell-left">R</text>
+      <text class="cell-right">{{selectedColor.RGB[0]}}</text>
+    </view>
+    <view class="info-cell">
+      <text class="cell-left">G</text>
+      <text class="cell-right">{{selectedColor.RGB[1]}}</text>
+    </view>
+    <view class="info-cell">
+      <text class="cell-left">B</text>
+      <text class="cell-right">{{selectedColor.RGB[2]}}</text>
+    </view>
+    <view class="info-cell">
+      <text class="cell-left">HEX</text>
+      <text class="cell-right" bindtap="copyHex" data-hex="{{selectedColor.hex}}" >{{selectedColor.hex}}</text>
+    </view>
+  </view>
+</view>

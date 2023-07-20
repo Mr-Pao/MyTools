@@ -1,0 +1,19 @@
+<view  class="home-button">
+		<image bindtap="goToHomePage" class="home-button-image" src="../../../images/other/return.png"></image>
+</view>
+
+
+<view class="title">您的功德：{{value}}</view>
+<view id="{{id}}">功德+1</view>
+<view class="mainCont">
+  <image src="../../../images/tools/muyu/muyu.png" bindtap="click" class="image {{classStyle}}"></image>
+  <button class="share" open-type="share" bindtap="">邀请好友</button>
+</view>
+<view class="right_button">
+  <image bindtap="restartFun" src="{{restartimg}}" mode="aspectFit"></image>
+  <text>重置</text>
+  <image bindtap="autoFun" src="{{autoimg}}"></image>
+  <text>自动</text>
+  <image bindtap="toggleBgMusic" src="{{bgMusicIcon}}"></image>
+  <text>音乐</text>
+</view>

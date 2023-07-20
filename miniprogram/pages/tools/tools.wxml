@@ -1,0 +1,18 @@
+<!--pages/tools/tools.wxml-->
+<view class="container"  disable-scroll="true">
+  <view class="banner">
+    <image src="../../images/banner.png" mode="widthFix" class="fullscreen-image" />
+  </view>
+  <view class="tools_list">
+  <view class="title">一只狍的工具箱</view>
+    <view class="button-container">
+      <view wx:for="{{buttons}}" wx:key="index">
+        <view class="button" bindtap="handleButtonClick" data-save="{{item}}">
+          <image class="button-icon" src="{{item.icon}}" alt="{{item.text}}" mode="widthFix"></image>
+          <text>{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
