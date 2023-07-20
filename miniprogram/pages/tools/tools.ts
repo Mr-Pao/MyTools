@@ -1,14 +1,14 @@
 // pages/tools/tools.ts
-// 定义保存按钮信息的数组
+// 工具页面的脚本文件
+
 const buttons = [
-  { icon: '../../images/tools_icon/DanMu.png', text: '手持弹幕', path: 'DanMu/DanMu' },
-  { icon: '../../images/tools_icon/ColorTransform.png', text: '色彩转换', path: 'ColorTransform/ColorTransform' },
-  { icon: '../../images/tools_icon/ChineseColor.png', text: '传统颜色', path: 'ChineseColor/ChineseColor' },
-  { icon: '../../images/tools_icon/MuYu.png', text: '电子木鱼', path: 'MuYu/MuYu' },
+  { icon: '../../images/tools_icon/DanMu.png', text: '弹幕', path: 'DanMu/DanMu' },
+  { icon: '../../images/tools_icon/ColorTransform.png', text: '颜色转换', path: 'ColorTransform/ColorTransform' },
+  { icon: '../../images/tools_icon/ChineseColor.png', text: '传统色', path: 'ChineseColor/ChineseColor' },
+  { icon: '../../images/tools_icon/MuYu.png', text: '木鱼', path: 'MuYu/MuYu' },
   { icon: '../../images/tools_icon/test.png', text: '在做了', path: '' },
   { icon: '../../images/tools_icon/test.png', text: '在做了', path: '' }
 ];
-
 
 Page({
 
@@ -19,7 +19,7 @@ Page({
     buttons: buttons
   },
 
-  //点击跳转
+  // 按钮点击事件
   handleButtonClick(event) {
     const path = event.currentTarget.dataset.save.path;
     const text = event.currentTarget.dataset.save.text;
