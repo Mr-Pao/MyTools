@@ -3,10 +3,12 @@ Page({
     inputValue: '',
     rgbColor: 'false',
     hexColor: 'false',
-    backgroundColor: ''
+    backgroundColor: '',
+    rgb: 'rgb(0,154,97)',//初始值
+    pick: false
   },
 
-  onLoad(options){
+  onLoad(options) {
     const text = decodeURIComponent(options.text);
     console.log(text); // 打印输出传递过来的 {{item.text}} 的值
     this.setData({
@@ -14,13 +16,30 @@ Page({
     });
   },
 
-    //返回主页
-    goToHomePage: function(e) {
-      wx.reLaunch({
-        url: '../tools'  // 这里是主页的路径，根据实际情况进行修改
-      });
-    },
-    
+  //返回主页
+  goToHomePage: function (e) {
+    wx.reLaunch({
+      url: '../tools'  // 这里是主页的路径，根据实际情况进行修改
+    });
+  },
+
+  // 显示取色器
+  toPick: function () {
+    this.setData({
+      pick: true,
+      position:'30%'
+    })
+  },
+  //取色结果回调
+  pickColor(e) {
+    let rgb = e.detail.color;
+    this.setData({
+      backgroundColor: rgb,
+      inputValue:rgb
+    });
+    this.performColorConversion(rgb)
+  },
+
   // 处理输入
   handleInput: function (e: any) {
     var inputValue = e.detail.value;
@@ -44,7 +63,7 @@ Page({
       b = parseInt(rsa[3]).toString(16).padStart(2, '0');
       return '#' + r + g + b;
     } else {
-      return 'false';
+      return val;
     }
   },
 
@@ -58,7 +77,7 @@ Page({
       var b = parseInt(rsa[3], 16);
       return 'rgb(' + r + ', ' + g + ', ' + b + ')';
     } else {
-      return 'false';
+      return val;
     }
   },
 
@@ -74,10 +93,10 @@ Page({
   },
 
   //点击复制
-  copyRGBColor: function() {
+  copyRGBColor: function () {
     wx.setClipboardData({
       data: this.data.rgbColor,
-      success: function() {
+      success: function () {
         wx.showToast({
           title: '复制成功',
           icon: 'success'
@@ -85,10 +104,10 @@ Page({
       }
     })
   },
-  copyhexColor: function() {
+  copyhexColor: function () {
     wx.setClipboardData({
       data: this.data.hexColor,
-      success: function() {
+      success: function () {
         wx.showToast({
           title: '复制成功',
           icon: 'success'

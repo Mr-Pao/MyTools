@@ -1,25 +1,35 @@
 <view class="page" style="background-color: {{backgroundColor}}">
 
-  <view  class="home-button">
+	<!-- 返回主页 -->
+	<view class="home-button">
 		<image bindtap="goToHomePage" class="home-button-image" src="../../../images/other/return.png"></image>
-</view>
-
-	<view class="box">
-		<view class="result-container">
-			<view class="result-item" wx:if="{{rgbColor !== 'false'}}">
-				<text class="result-text">RGB颜色值：</text>
-				<text class="result-text" bindtap="copyRGBColor">{{rgbColor}}</text>
-			</view>
-			<view class="result-item" wx:if="{{hexColor !== 'false'}}">
-				<text class="result-text">十六进制颜色值：</text>
-				<text class="result-text" bindtap="copyhexColor">{{hexColor}}</text>
-			</view>
-		</view>
-
-		<view class="input-container">
-			<input class="input-text" bindinput="handleInput" placeholder="输入RGB值或16进制值" />
-		</view>
-
-
 	</view>
+
+		<!-- 调色盘 -->
+			<view bindtap="toPick" class="tiaosepan">
+			<image src="../../../images/tools/ColorTransform/tiaoseban.png" mode="widthFix" style="width: 100%;"/>
+			</view>
+			<color-picker bindchangeColor="pickColor" initColor="{{rgb}}" show="{{pick}}" />
+
+
+		<view class="box" style="top: {{position}};">
+			<!-- 结果展示区域 -->
+			<view class="result-container">
+				<!-- 如果rgbColor不为'false'，显示RGB颜色值 -->
+				<view class="result-item" wx:if="{{rgbColor !== 'false'}}">
+					<text class="result-text">RGB颜色值：</text>
+					<text class="result-text" bindtap="copyRGBColor">{{rgbColor}}</text>
+				</view>
+				<!-- 如果hexColor不为'false'，显示十六进制颜色值 -->
+				<view class="result-item" wx:if="{{hexColor !== 'false'}}">
+					<text class="result-text">十六进制颜色值：</text>
+					<text class="result-text" bindtap="copyhexColor">{{hexColor}}</text>
+				</view>
+			</view>
+
+			<!-- 输入框区域 -->
+			<view class="input-container">
+				<input class="input-text" bindinput="handleInput" placeholder="输入颜色值" />
+			</view>
+		</view>
 </view>

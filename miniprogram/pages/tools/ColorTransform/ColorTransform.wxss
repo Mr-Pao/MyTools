@@ -4,14 +4,21 @@
 	align-items: center;
 	height: 100vh;
 }
+.tiaosepan{
+  position: fixed;
+	bottom: 80rpx;
+	right: 80rpx;
+	width: 80rpx;
+}
 
 .box {
   position: fixed;
-  bottom: 35rpx;
+	/* top: 5%; */
+	height: auto;
 	/* width: 60%; */
 	/* padding: 10px; */
 	border-radius: 25px;
-	/* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 	background-color: var(--background-color);
 }
 
