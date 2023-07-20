@@ -16,6 +16,7 @@ App<IAppOption>({
       },
     })
 
+    
     //更新
     checkUpdate()
     /**

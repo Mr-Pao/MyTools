@@ -10,6 +10,7 @@ const buttons = [
   { icon: '../../images/tools_icon/test.png', text: '在做了', path: '' }
 ];
 
+
 Page({
 
   /**
@@ -20,7 +21,7 @@ Page({
   },
 
   // 按钮点击事件
-  handleButtonClick(event) {
+  handleButtonClick(event:any) {
     const path = event.currentTarget.dataset.save.path;
     const text = event.currentTarget.dataset.save.text;
     wx.navigateTo({

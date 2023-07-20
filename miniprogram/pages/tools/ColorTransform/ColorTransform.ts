@@ -17,7 +17,7 @@ Page({
   },
 
   //返回主页
-  goToHomePage: function (e) {
+  goToHomePage: function (e:any) {
     wx.reLaunch({
       url: '../tools'  // 这里是主页的路径，根据实际情况进行修改
     });
@@ -31,7 +31,7 @@ Page({
     })
   },
   //取色结果回调
-  pickColor(e) {
+  pickColor(e:any) {
     let rgb = e.detail.color;
     this.setData({
       backgroundColor: rgb,

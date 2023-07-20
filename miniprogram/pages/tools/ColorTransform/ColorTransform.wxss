@@ -12,8 +12,8 @@
 }
 
 .box {
-  position: fixed;
-	/* top: 5%; */
+	position: fixed;
+	top: 90%;
 	height: auto;
 	/* width: 60%; */
 	/* padding: 10px; */
