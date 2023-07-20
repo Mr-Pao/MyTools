@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 150rpx;
+}
+
+.palette {
+  margin: 20px 0;
+}
+
+.palette-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.circle {
+  transform: rotate(45deg);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, .3);
+  border-radius: 50% 50% 50% 50%;
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: -50rpx;
+  transition: transform 0.2s ease-out;  /* 添加过渡效果，时长为 0.2s */
+}
+/* 通过判断是否选中来添加样式 */
+.circle.selected {
+  transform: scale(1.2);  /* 添加缩放效果 */
+}

@@ -1,21 +1,25 @@
 // pages/index/index.js
-
 Page({
   data: {
     backgroundColor: '#000',
     fontSize: 500,
-    animateTime: 5,
+    animateTime: 10,
     fontColor: 'red',
     text: '请输入弹幕内容',
     showModalStatus: false,
     currentTab: 0,
     sliderValOfFontSize: 500,
-    sliderValOfAnimateTime: 5,
+    sliderValOfAnimateTime: 10,
     colorArr: [
+      { color: '#FF0000' },
+      { color: '#FF7F00' },
+      { color: '#FFFF00' },
+      { color: '#00FF00' },
+      { color: '#00FFFF' },
+      { color: '#0000FF' },
+      { color: '#8B00FF' },
       { color: '#000000' },
-      { color: '#ff0000' },
-      { color: '#00ff00' },
-      { color: '#0000ff' }
+      { color: '#FFFFFF' }
     ],
     danmuList: [] // 弹幕列表
   },
@@ -96,25 +100,6 @@ Page({
       fontColor: selectedColor
     });
   },
-
-  changeTextSpeend: function (e: any) {
-    this.setData({
-      sliderValOfAnimateTime: e.detail.value,
-      animateTime: e.detail.value
-    });
-  },
-
-  setBackGroundColor: function (e: any) {
-    console.log(e)
-    var index = e.currentTarget.dataset.index;
-    console.log(index);
-    var selectedColor = this.data.colorArr[index].color;
-
-    this.setData({
-      backgroundColor: selectedColor
-    });
-  },
-
 
   //分享
   onShareAppMessage() {

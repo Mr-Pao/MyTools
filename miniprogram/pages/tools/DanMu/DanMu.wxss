@@ -25,16 +25,17 @@ page{
 }
 @keyframes animateText{
   0%{
-    margin-top: 0%;
+    margin-top: -150%;
   }
   100%{
-    margin-top: -700%;
+    margin-top: -850%;
   }
 }
 .inputBox{
   position: fixed;
   bottom: 1%;
   display: flex;
+  bottom: 40rpx;
    
   /* background-color: saddlebrown; */
    
@@ -46,7 +47,7 @@ page{
   padding-left: 20rpx;
   color: white;
   font-size: 30rpx;
-  width: 390rpx;
+  width: 400rpx;
   height: 63rpx;
 }
 .iconBtn1{

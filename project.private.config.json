@@ -41,6 +41,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "PeiSe",
+          "pathName": "pages/tools/PeiSe/PeiSe",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

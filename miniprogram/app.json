@@ -5,7 +5,8 @@
     "pages/tools/ColorTransform/ColorTransform",
     "pages/tools/ChineseColor/ChineseColor",
     "pages/tools/DanMu/DanMu",
-    "pages/tools/MuYu/MuYu"
+    "pages/tools/MuYu/MuYu",
+    "pages/tools/PeiSe/PeiSe"
   ],
   "window": {
     "navigationStyle": "custom",
