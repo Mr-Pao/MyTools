@@ -101,6 +101,25 @@ Page({
     });
   },
 
+  changeTextSpeed: function (event) {
+    // 获取滑动条的值
+    var sliderValue = event.detail.value;
+    this.setData({
+      sliderValOfAnimateTime: sliderValue,
+      animateTime:20.1-sliderValue
+    });
+    console.log('当前滑动条的值：', sliderValue);
+  },
+
+  setBackGroundColor: function (e: any) {
+    var index = e.currentTarget.dataset.index;
+    var selectedColor = this.data.colorArr[index].color;
+    console.log(selectedColor)
+    this.setData({
+      backgroundColor: selectedColor
+    });
+  },
+
   //分享
   onShareAppMessage() {
     const pages = getCurrentPages();

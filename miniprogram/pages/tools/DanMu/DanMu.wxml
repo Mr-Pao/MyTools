@@ -38,7 +38,7 @@
     <!-- 字体速度 -->
     <swiper-item>
       <view class="swiperItem1">
-        <slider min="0" max="20" step="0.1" show-value bindchanging='changeTextSpeend' selected-color='#006AFE' value='{{sliderValOfAnimateTime}}'></slider>
+        <slider min="0" max="20" step="0.1" show-value bindchanging='changeTextSpeed' selected-color='#006AFE' value='{{sliderValOfAnimateTime}}'></slider>
       </view>
     </swiper-item>
     <!-- 背景颜色 -->
