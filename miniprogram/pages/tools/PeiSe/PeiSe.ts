@@ -22,43 +22,8 @@ Page({
     });
   },
 
-  //放大
-  selectColor: function(e) {
-    var colorIndex = e.currentTarget.dataset.colorIndex; // 获取点击的圆形元素的颜色索引
-    var paletteIndex = e.currentTarget.dataset.paletteIndex; // 获取点击的圆形元素的调色板索引
-  
-    // 获取当前选中的颜色索引和调色板索引
-    var selectedColorIndex = this.data.selectedIndex.colorIndex;
-    var selectedPaletteIndex = this.data.selectedIndex.paletteIndex;
-  
-    // 判断是否同时选中了目标颜色和调色板，并触发动画
-    if (colorIndex === selectedColorIndex && paletteIndex === selectedPaletteIndex) {
-      this.setData({
-        'selectedIndex.colorIndex': -1,
-        'selectedIndex.paletteIndex': -1
-      }, function() {
-        setTimeout(() => {
-          // 延时 200ms 后再次更新 selectedIndex，使元素缩小回原始大小
-          this.setData({
-            'selectedIndex.colorIndex': selectedColorIndex,
-            'selectedIndex.paletteIndex': selectedPaletteIndex
-          });
-        }, 200);
-      });
-    } else {
-      // 更新选中的索引
-      this.setData({
-        'selectedIndex.colorIndex': colorIndex,
-        'selectedIndex.paletteIndex': paletteIndex
-      });
-    }
-  },  
-  
-  
-
-
   //点击复制
-  copyHex: function (e) {
+  selectColor: function (e) {
     const hex = e.currentTarget.dataset.hex;
     wx.setClipboardData({
       data: hex,

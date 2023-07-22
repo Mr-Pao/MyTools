@@ -1,9 +1,14 @@
 <view class="container">
+
+  <view class="home-button">
+    <image bindtap="goToHomePage" class="home-button-image" src="../../../images/other/return.png"></image>
+  </view>
+
   <block wx:for="{{peise}}" wx:key="palette_id">
     <view class="palette">
       <text class="palette-title">{{item.palette_id}}</text>
       <block wx:for="{{item.colors}}" wx:key="index">
-        <view class="circle {{index === selectedIndex ? 'selected animation' : ''}}" style="background-color: {{item}};" bindtap="selectColor" data-palette-index="{{itemIndex}}" data-color-index="{{index}}"></view>
+        <view class="circle" style="background-color: {{item}};" bindtap="selectColor" data-hex="{{item}}"></view>
       </block>
     </view>
   </block>
