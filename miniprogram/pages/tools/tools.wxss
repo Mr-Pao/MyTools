@@ -54,7 +54,7 @@
 }
 
 .button-icon {
-  width: 40%; /* 图标宽度占满按钮的宽度 */
+  width: 35%; /* 图标宽度占满按钮的宽度 */
   aspect-ratio: 1/1; /* 图标宽高比例为 1:1，保持正方形 */
   margin-bottom: 8px; /* 图标与文字之间的间距 */
 }
@@ -62,4 +62,5 @@
 .button text {
   color: var(--text-color);
   margin-top: 5rpx;
+  text-align: center;
 }

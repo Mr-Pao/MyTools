@@ -32,9 +32,7 @@ Page({
       data: hex,
       success: function () {
         wx.showToast({
-          title: '颜色值已复制',
-          icon: 'success',
-          duration: 2000
+          title: '颜色值已复制'
         });
       }
     });

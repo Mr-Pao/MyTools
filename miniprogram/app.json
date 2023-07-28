@@ -6,7 +6,9 @@
     "pages/tools/ChineseColor/ChineseColor",
     "pages/tools/DanMu/DanMu",
     "pages/tools/MuYu/MuYu",
-    "pages/tools/PeiSe/PeiSe"
+    "pages/tools/PeiSe/PeiSe",
+    "pages/tools/Love/Love",
+    "pages/tools/HistoryToday/HistoryToday"
   ],
   "window": {
     "navigationStyle": "custom",

@@ -1,0 +1,18 @@
+<view class="container">
+	<!-- 返回主页 -->
+	<view class="home-button">
+		<image bindtap="goToHomePage" class="home-button-image" src="../../../images/other/return.png"></image>
+	</view>
+  
+  <view class="gif-container">
+    <image src="../../../images/tools/Love/FlyingHearts.gif" mode="widthFix" />
+  </view>
+  <view class="text-container">
+    <text class="text" >{{displayText}}</text>
+  </view>
+  <view class="button-container">
+    <button bindtap="copyData" class="btn">复制</button>
+    <view class="gap"></view>
+    <button bindtap="getData" class="btn">换一个</button>
+  </view>
+</view>

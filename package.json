@@ -5,11 +5,13 @@
   "scripts": {},
   "keywords": [],
   "author": "",
-  "license": "",
+  "license": "ISC",
   "dependencies": {
+    "laf-client-sdk": "^1.0.0-beta.10",
     "mini-color-picker": "^0.1.2"
   },
   "devDependencies": {
     "miniprogram-api-typings": "^3.10.0"
-  }
+  },
+  "main": "index.js"
 }

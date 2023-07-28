@@ -5,10 +5,13 @@ const buttons = [
   { icon: '../../images/tools_icon/DanMu.png', text: '弹幕', path: 'DanMu/DanMu' },
   { icon: '../../images/tools_icon/MuYu.png', text: '木鱼', path: 'MuYu/MuYu' },
 
-  { icon: '../../images/tools_icon/test.png', text: '在做了', path: '' },
+  { icon: '../../images/tools_icon/Love.png', text: '情话', path: 'Love/Love' },
   { icon: '../../images/tools_icon/ColorTransform.png', text: '颜色转换', path: 'ColorTransform/ColorTransform' },
   { icon: '../../images/tools_icon/ChineseColor.png', text: '传统色', path: 'ChineseColor/ChineseColor' },
-  { icon: '../../images/tools_icon/PeiSe.png', text: '配色推荐', path: 'PeiSe/PeiSe' }
+  { icon: '../../images/tools_icon/PeiSe.png', text: '配色推荐', path: 'PeiSe/PeiSe' },
+  { icon: '../../images/tools_icon/HistoryToday.png', text: '历史的今天', path: 'HistoryToday/HistoryToday' },
+  { icon: '../../images/tools_icon/test.png', text: '在做了', path: '' },
+  { icon: '../../images/tools_icon/test.png', text: '在做了', path: '' }
 ];
 
 

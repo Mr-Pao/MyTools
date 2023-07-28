@@ -1,0 +1,38 @@
+<view class="sticky-header">
+  <view class="header-content">
+    <text>历史上的今天</text>
+    <text>{{today}}</text>
+  </view>
+</view>
+
+<view class="container">
+  <!-- 返回主页 -->
+  <view class="home-button">
+    <image bindtap="goToHomePage" class="home-button-image" src="../../../images/other/return.png"></image>
+  </view>
+  <!-- Loading -->
+  <view class="loading" wx:if="{{!hideLoading}}">
+    <image src="../../../images/loading.gif" mode="widthFix" />
+  </view>
+  <!-- 内容 -->
+  <view wx:else>
+    <view class="list">
+      <block wx:for="{{data}}" wx:key="index">
+        <view class="item" bindtap="toggleDetails" data-index="{{index}}">
+          <view class="year">{{item.year}}</view>
+          
+          <view class="title">{{item.title}}</view>
+        </view>
+      </block>
+    </view>
+    <view class="modal" wx:if="{{isExpanded}}">
+      <view class="modal-content">
+        <scroll-view class="scroll-view-content" scroll-y>
+          <rich-text nodes="{{expandedDetails}}" />
+        </scroll-view>
+        <view class="close-modal" bindtap="closeModal">关闭</view>
+      </view>
+    </view>
+  </view>
+
+</view>
