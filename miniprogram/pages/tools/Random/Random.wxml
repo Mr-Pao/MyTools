@@ -1,0 +1,32 @@
+<view class="container">
+  <!-- 返回主页 -->
+  <view class="home-button">
+    <image bindtap="goToHomePage" class="home-button-image" src="../../../images/other/return.png"></image>
+  </view>
+
+  <view class="wrapper">
+    <text class="text" data-text="{{randomResult}}">{{randomResult}}</text>
+  </view>
+
+  <view class="form">
+    <view class="input-wrapper">
+      <input bindinput="getMinNum" name="minNum" placeholder="{{minNum}}" />
+    </view>
+    <view class="input-wrapper">
+      <text>~</text>
+    </view>
+    <view class="input-wrapper">
+      <input bindinput="getMaxNum" name="maxNum" placeholder="{{maxNum}}" />
+    </view>
+  </view>
+
+  <view>
+    <button class="btn" bindtap="startRandom" disabled='{{isDisabledStart}}'>开始</button>
+  </view>
+
+  		<!-- 刷新 -->
+			<view bindtap="refresh" class="refresh">
+			<image src="../../../images/tools/Random/refresh.png" mode="widthFix" style="width: 100%;" class="{{isRotating ? 'rotating-icon' : ''}}"/>
+			</view>
+
+</view>

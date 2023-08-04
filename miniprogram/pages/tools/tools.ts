@@ -10,7 +10,7 @@ const buttons = [
   { icon: '../../images/tools_icon/ChineseColor.png', text: '传统色', path: 'ChineseColor/ChineseColor' },
   { icon: '../../images/tools_icon/PeiSe.png', text: '配色推荐', path: 'PeiSe/PeiSe' },
   { icon: '../../images/tools_icon/HistoryToday.png', text: '历史的今天', path: 'HistoryToday/HistoryToday' },
-  { icon: '../../images/tools_icon/test.png', text: '在做了', path: '' },
+  { icon: '../../images/tools_icon/Random.png', text: '随机数', path: 'Random/Random' },
   { icon: '../../images/tools_icon/test.png', text: '在做了', path: '' }
 ];
 

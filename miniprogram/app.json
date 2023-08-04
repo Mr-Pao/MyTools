@@ -8,7 +8,8 @@
     "pages/tools/MuYu/MuYu",
     "pages/tools/PeiSe/PeiSe",
     "pages/tools/Love/Love",
-    "pages/tools/HistoryToday/HistoryToday"
+    "pages/tools/HistoryToday/HistoryToday",
+    "pages/tools/Random/Random"
   ],
   "window": {
     "navigationStyle": "custom",

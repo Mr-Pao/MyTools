@@ -3,6 +3,7 @@ page {
   /* 背景色 */
   background-color: var(--background-color);
   --background-color: #f5f5f5;
+  --background-color-black: #222;
   /* 主题色 */
   --theme-color: #ffa631;
   /* 阴影色 */

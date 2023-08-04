@@ -63,6 +63,13 @@
           "query": "text=%25E5%258E%2586%25E5%258F%25B2%25E4%25B8%258A%25E7%259A%2584%25E4%25BB%258A%25E5%25A4%25A9",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "Random",
+          "pathName": "pages/tools/Random/Random",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
